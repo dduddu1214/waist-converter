@@ -1,0 +1,113 @@
+/* Pretendard + 기본 설정 */
+body {
+  margin: 0;
+  font-family: "Pretendard", system-ui, sans-serif;
+}
+
+/* 래퍼: 화면 전체 배경 및 정렬 */
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 3rem 1rem;
+  box-sizing: border-box;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* 테마 색상 */
+.wrapper.light {
+  background-color: #f9f9f9;
+  color: #222;
+}
+
+.wrapper.dark {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+}
+
+/* 내부 콘텐츠 박스 */
+.container {
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+}
+
+/* 입력창 */
+input {
+  padding: 10px;
+  font-size: 1rem;
+  width: 80%;
+  max-width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* 결과 표시 */
+.result {
+  margin-top: 1.5rem;
+  font-size: 1.1rem;
+}
+
+/* 다크모드 input 스타일 */
+.wrapper.dark input {
+  background-color: #333;
+  color: #fff;
+  border-color: #555;
+}
+
+/* 다크모드 카드 */
+.wrapper.dark .size-card {
+  background-color: #333;
+  color: #fff;
+  border-color: #555;
+}
+
+/* 다크모드 버튼 */
+.wrapper.dark .theme-toggle {
+  background: #555;
+  color: #fff;
+}
+
+/* 버튼 */
+.theme-toggle {
+  margin-bottom: 1rem;
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  background: #ccc;
+}
+
+/* 사이즈 카드 */
+.size-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1rem;
+  background: #f4f4f4;
+  width: 100%;
+  max-width: 140px;
+  box-sizing: border-box;
+}
+
+/* 카드 배열 */
+.size-chart {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* 모바일 대응 */
+@media (max-width: 500px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .size-card {
+    font-size: 0.9rem;
+    padding: 0.8rem;
+  }
+}

@@ -59,7 +59,9 @@ function App() {
 
   const fullCm = halfCm ? (halfCm * 2).toFixed(1) : "";
   const inch = halfCm ? ((halfCm * 2) / 2.54).toFixed(1) : "";
-  const size = inch ? getPantsSize(inch) : "";
+  const roundedInch = inch ? Math.round(parseFloat(inch)) : null;
+  const size = roundedInch ? getPantsSize(roundedInch) : "";
+
   const sizeLabel = size ? size.split(" ")[0] : "";
 
   return (

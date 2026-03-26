@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://waist-converter.vercel.app/sitemap.xml

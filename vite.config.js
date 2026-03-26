@@ -7,9 +7,12 @@ export default defineConfig({
   plugins: [
     react(),
     VitePWA({
-      registerType: "autoUpdate", // ✅ 핵심 설정
+      registerType: "autoUpdate",
+      workbox: {
+        navigateFallback: "/index.html",
+      },
       manifest: {
-        name: "FitFinder",
+        name: "FitFinder - 사이즈 변환기",
         short_name: "FitFinder",
         start_url: "/",
         display: "standalone",
